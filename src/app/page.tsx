@@ -38,7 +38,7 @@ export default function Home() {
             </ul>
           </>
         ) : (
-          <div>Loading...</div>
+          <div>Loading...!</div>
         )}
       </main>
     </div>
