@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import TabBar from '@/app/components/tabbar';
+import TabBar from "./components/TabBar"
 
 const inter = Inter({ subsets: ["latin"] });
 
