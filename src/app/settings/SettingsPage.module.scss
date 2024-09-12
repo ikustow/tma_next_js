@@ -1,0 +1,21 @@
+// SettingsPage.module.scss
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    h1,
+    h2 {
+        margin: 10px 0;
+    }
+}
+
+#ton-connect-button {
+    margin-top: 20px;
+}
