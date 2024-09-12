@@ -22,8 +22,9 @@ export default function SettingsPage() {
                 });
 
                 // Подписка на изменения статуса подключения кошелька
-                globalTonConnect.onStatusChange((walletAndWalletInfo) => {
-                    setWalletInfo(walletAndWalletInfo);
+                globalTonConnect.onStatusChange((walletInfo) => {
+                    setWalletInfo(walletInfo);
+                    console.log(walletInfo);
                 });
             }
 
@@ -41,14 +42,19 @@ export default function SettingsPage() {
         }
     };
 
+    const formatAddress = (address: string) => {
+        const firstPart = address.slice(0, 5); // первые 5 символов
+        const lastPart = address.slice(-5); // последние 5 символов
+        return `${firstPart}...${lastPart}`; // соединяем
+    };
+
     return (
         <div className={styles.container}> {/* Используем стили */}
             <h1>Connect to Ton Wallet</h1>
             <div id="ton-connect-button"></div>
             {walletInfo && (
                 <div>
-                    <h2>Wallet Information:</h2>
-                    <p><strong>Address:</strong> {walletInfo.account.address}</p>
+
                 </div>
             )}
         </div>

@@ -1,0 +1,43 @@
+// TabBar.module.scss
+
+.tabBar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    /* Черный фон */
+    padding: 10px 0;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    /* Добавляем отступ снизу с учетом безопасной области */
+    border-top: 1px solid purple;
+    /* Фиолетовая верхняя граница */
+}
+
+.tabLink {
+    text-decoration: none;
+    color: white;
+    /* Белый шрифт */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid purple;
+    /* Фиолетовая рамка */
+    border-radius: 8px;
+    /* Округленные углы */
+    transition: background-color 0.3s ease;
+}
+
+.tabLink.active {
+    font-weight: bold;
+    background-color: purple;
+    /* Фиолетовый фон для активной вкладки */
+    color: white;
+    /* Белый текст */
+}
+
+.tabLink:hover {
+    background-color: #4b0082;
+    /* Темно-фиолетовый при наведении */
+}

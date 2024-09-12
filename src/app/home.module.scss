@@ -1,6 +1,30 @@
+// home.module.scss
+
 .myComponent {
-    background-color: #ffffff; // Белый фон
-    padding: 20px; // Дополнительные стили для отступов
-    border-radius: 6px; // Немного округлим углы
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Тень для лучшего визуального эффекта
+    display: flex;
+    justify-content: center; // Центрирование по горизонтали
+    align-items: center; // Центрирование по вертикали
+    min-height: 100vh; // Высота на весь экран
+    background-color: black; // Черный фон
+    color: white; // Белый текст
+    text-align: center; // Центрирование текста
+
+    main {
+        border: 2px solid purple; // Фиолетовая рамка
+        padding: 20px;
+        border-radius: 8px; // Округление углов рамки
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none; // Убираем маркеры списка
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
 }

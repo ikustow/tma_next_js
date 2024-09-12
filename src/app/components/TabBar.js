@@ -3,47 +3,22 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import styles from './TabBar.module.scss'; // Импортируем SCSS
 
 const TabBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="tab-bar">
-      <Link href="/" className={pathname === '/' ? 'active' : ''}>
+    <nav className={styles.tabBar}> {/* Применяем класс tabBar */}
+      <Link href="/" className={`${styles.tabLink} ${pathname === '/' ? styles.active : ''}`}>
         Home
       </Link>
-      <Link href="/profile" className={pathname === '/profile' ? 'active' : ''}>
+      <Link href="/profile" className={`${styles.tabLink} ${pathname === '/profile' ? styles.active : ''}`}>
         Profile
       </Link>
-      <Link href="/settings" className={pathname === '/settings' ? 'active' : ''}>
+      <Link href="/settings" className={`${styles.tabLink} ${pathname === '/settings' ? styles.active : ''}`}>
         Settings
       </Link>
-
-
-      <style jsx>{`
-        .tab-bar {
-          display: flex;
-          justify-content: space-around;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background-color: #fff;
-          border-top: 1px solid #eaeaea;
-          padding: 10px 0;
-        }
-
-        a {
-          text-decoration: none;
-          color: #888;
-          font-size: 16px;
-        }
-
-        a.active {
-          color: #0070f3;
-          font-weight: bold;
-        }
-      `}</style>
     </nav>
   );
 };
