@@ -19,6 +19,7 @@ const TabBar = () => {
         Settings
       </Link>
 
+
       <style jsx>{`
         .tab-bar {
           display: flex;
