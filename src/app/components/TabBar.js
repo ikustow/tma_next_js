@@ -9,14 +9,14 @@ const TabBar = () => {
 
   return (
     <nav className="tab-bar">
-      <Link href="/home">
-        <a className={pathname === '/home' ? 'active' : ''}>Home</a>
+      <Link href="/" className={pathname === '/' ? 'active' : ''}>
+        Home
       </Link>
-      <Link href="/profile">
-        <a className={pathname === '/profile' ? 'active' : ''}>Profile</a>
+      <Link href="/profile" className={pathname === '/profile' ? 'active' : ''}>
+        Profile
       </Link>
-      <Link href="/settings">
-        <a className={pathname === '/settings' ? 'active' : ''}>Settings</a>
+      <Link href="/settings" className={pathname === '/settings' ? 'active' : ''}>
+        Settings
       </Link>
 
       <style jsx>{`
